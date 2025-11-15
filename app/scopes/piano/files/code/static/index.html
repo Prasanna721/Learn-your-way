@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Music Network</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="controls-panel">
+        <div class="control-item">
+            <label for="output-delay-slider">Output Delay (ms):</label>
+            <input type="range" id="output-delay-slider" min="0" max="1000" value="300" step="10">
+            <span id="delay-value">300</span>
+        </div>
+        <button id="reset-network-btn" class="reset-button">Reset Network</button>
+    </div>
+    <div class="notes-history-panel">
+        <div class="notes-history-header">Recent Notes</div>
+        <div id="notes-history-list" class="notes-history-list"></div>
+    </div>
+    <div class="container">
+        <div class="left-panel">
+            <div class="legend">
+                <span class="legend-item"><span class="legend-color blue"></span> Input → Network</span>
+                <span class="legend-item"><span class="legend-color orange"></span> Network → Output</span>
+                <span class="legend-item"><span class="legend-color white"></span> Connections</span>
+            </div>
+            <div class="piano-container">
+                <div id="piano" class="piano"></div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <canvas id="network-canvas"></canvas>
+            <canvas id="connections-canvas"></canvas>
+        </div>
+    </div>
+    <div class="play-buttons-container">
+        <button id="play-direct-btn" class="play-button">Play Tune Directly</button>
+        <button id="play-network-btn" class="play-button">Play Through Network</button>
+    </div>
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Initializing Neural Network...</div>
+            <div class="loading-subtext">Compiling optimized functions (this may take 30-40 seconds)</div>
+        </div>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
+

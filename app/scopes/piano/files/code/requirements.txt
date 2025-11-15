@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+termcolor
+numpy
+numba
+websockets
+

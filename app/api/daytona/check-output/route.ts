@@ -1,0 +1,57 @@
+import { NextResponse } from "next/server";
+import { getDaytona } from "@/lib/daytona";
+
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const sandboxId = searchParams.get("sandboxId");
+    const outputPath = searchParams.get("outputPath");
+
+    if (!sandboxId || !outputPath) {
+      return NextResponse.json(
+        { success: false, error: "Missing required parameters" },
+        { status: 400 }
+      );
+    }
+
+    const daytona = getDaytona();
+    if (!daytona) {
+      return NextResponse.json(
+        { success: false, error: "Daytona not initialized" },
+        { status: 500 }
+      );
+    }
+
+    // Get sandbox
+    const sandbox = await daytona.get(sandboxId);
+
+    // Try to list files at the output path
+    try {
+      const files = await sandbox.fs.listFiles(outputPath);
+
+      // If we can list files and there are files, it's ready
+      const ready = files && files.length > 0;
+
+      return NextResponse.json({
+        success: true,
+        ready,
+      });
+    } catch (error) {
+      // File doesn't exist yet
+      return NextResponse.json({
+        success: true,
+        ready: false,
+      });
+    }
+  } catch (error) {
+    console.error("Error checking output:", error);
+
+    return NextResponse.json(
+      {
+        success: false,
+        error: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 }
+    );
+  }
+}

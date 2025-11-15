@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Google Sans", "Google Sans Flex", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Brand tokens roughly matching screenshots */
+:root {
+  --brand-sand: #f6efe9;    /* card background tint */
+  --chip-gray: #f0f1f2;
+
+  /* Coral palette - lightest to darkest */
+  --brand-coral-lightest: #fef5f2;
+  --brand-coral-lighter: #fce5dc;
+  --brand-coral-light: #f9d0c4;
+  --brand-coral: #f6ae96;   /* coral background + primary */
+  --brand-coral-strong: #ee9a7e;
+  --brand-coral-dark: #e6866a;
+  --brand-coral-darkest: #d96f51;
+}
+
+/* Utility helpers for precise rounded, shadow, and ring treatments */
+.shadow-card {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.ring-coral {
+  box-shadow: 0 0 0 1px rgba(255, 107, 74, 0.25) inset;
+}
+
+/* Simple pointer triangle for the hero card */
+.pointer-triangle {
+  width: 0; height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 16px solid #0a0a0a;
+}
+
+/* Icon font baseline alignment */
+.material-icons, .material-icons-outlined, .material-symbols-outlined {
+  vertical-align: -0.25em;
+}

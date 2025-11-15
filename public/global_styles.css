@@ -1,0 +1,24 @@
+/* Additional global tweaks for the design */
+html, body { height: 100%; }
+
+/* Ensure Google Sans renders crisply */
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+/* App buttons styled to match screenshot */
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 12px;
+  height: 64px; padding: 0 26px; border-radius: 9999px;
+  border: 0; cursor: pointer; user-select: none;
+  font: 700 16px/1.1 var(--font-sans, "Google Sans", system-ui, sans-serif);
+  letter-spacing: .01em;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+  transition: background-color .2s ease, transform .02s ease, box-shadow .2s ease;
+}
+.btn-pill:active { transform: translateY(.5px); }
+
+.btn-coral { background: var(--brand-coral); color: #111; }
+.btn-coral:hover { background: var(--brand-coral-strong); }
+
+.btn-sand { background: var(--brand-sand); color: #111; box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.btn-sand:hover { background: #e9dfd7; }
+

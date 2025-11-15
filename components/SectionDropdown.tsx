@@ -85,7 +85,7 @@ export default function SectionDropdown({ onSectionChange }: SectionDropdownProp
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-full min-w-[200px] flex flex-col gap-1.5">
+        <div className="absolute top-full left-0 mt-2 w-full min-w-[200px] flex flex-col gap-1.5 z-50">
           {sections.map((section, index) => (
             <button
               key={section.id}

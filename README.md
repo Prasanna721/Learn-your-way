@@ -2,6 +2,7 @@
 
 A new way to visualize machine learning models with real-time input and output.
 <img width="3584" height="2158" alt="Screenshot 2025-11-15 at 4 06 53 PM" src="https://github.com/user-attachments/assets/160f531b-5239-40e7-8b9e-6b29388998d6" />
+<img width="3584" height="2158" alt="Screenshot 2025-11-15 at 5 30 41 PM" src="https://github.com/user-attachments/assets/e0648ff0-519c-4f54-b399-d465a3a1db52" />
 
 ## What It Does
 

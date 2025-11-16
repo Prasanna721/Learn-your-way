@@ -1,4 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learn Your Way
+
+A new way to visualize machine learning models with real-time input and output.
+
+## What It Does
+
+Learn Your Way revolutionizes how you interact with and understand ML models by providing intelligent, automatic visualization of model architectures and their behavior.
+
+### Key Features
+
+- **Drag & Drop Interface**: Simply drop your training and inference code (with or without data)
+- **Intelligent Layer Detection**: Automatically understands your model's architecture and layers
+- **Smart Visualization**: Determines the best way to visualize your specific ML model
+- **Real-time I/O Monitoring**: See inputs and outputs as they flow through your model
+- **GPU-Ready Deployment**: Download and run on your own GPU instances
+
+## How It Works
+
+1. **Upload Your Code**: Drag and drop your ML training and inference code
+2. **Automated Analysis**: Claude Code agents running in Daytona analyze your model structure
+3. **FastAPI Server Generation**: Automatically creates a FastAPI server for model inference
+4. **Deploy Anywhere**: Download the generated code and run it on your GPU instance
+5. **Connect & Visualize**: Provide the connection URL and start visualizing your model in real-time
+
+## Tech Stack
+
+- **Frontend**: Next.js with TypeScript
+- **AI Agents**: Claude Code agents for code analysis and generation
+- **Runtime Environment**: Daytona for isolated execution
+- **Inference Server**: FastAPI (auto-generated)
+- **Deployment**: Flexible - run on any GPU instance
 
 ## Getting Started
 
@@ -16,21 +46,18 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Use Cases
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Debug ML models by visualizing layer activations
+- Understand how data flows through your network
+- Demonstrate model behavior to non-technical stakeholders
+- Experiment with different model architectures
+- Educational tool for learning ML concepts
 
-## Learn More
+## Why Learn Your Way?
 
-To learn more about Next.js, take a look at the following resources:
+Traditional ML development involves writing code, running experiments, and analyzing logs or tensorboard outputs. Learn Your Way provides an intuitive, visual interface that helps you understand your models at a glance, making ML development faster and more accessible.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with Claude Code agents and Daytona for seamless ML model analysis and visualization.
